@@ -1,876 +1,749 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Riya & Athul's Wedding</title>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-78Q7XBCEX1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-78Q7XBCEX1");
-    </script>
-    <meta
-      name="description"
-      content="Join us in celebrating the wedding of Riya Thankachan and Athul Seban on November 22, 2025, in Kariyathumpara, Kerala."
-    />
-    <meta
-      name="keywords"
-      content="Riya Thankachan, Athul Seban, wedding, marriage, Kerala, wedding invitation"
-    />
-
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>"
-    />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://journeyofathulriya.life" />
-    <meta property="og:title" content="Riya & Athul's Wedding" />
-    <meta
-      property="og:description"
-      content="We joyfully invite you to celebrate our wedding on November 22, 2025."
-    />
-    <meta
-      property="og:image"
-      content="https://journeyofathulriya.life/invite.jpg"
-    />
-
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://journeyofathulriya.life" />
-    <meta property="twitter:title" content="Riya & Athul's Wedding" />
-    <meta
-      property="twitter:description"
-      content="We joyfully invite you to celebrate our wedding on November 22, 2025."
-    />
-    <meta
-      property="twitter:image"
-      content="https://journeyofathulriya.life/invite.jpg"
-    />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Pennine Care Centre | Caring is What We Do Best</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css?family=EB+Garamond:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      :root {
+        --gold: #c5a059;
+        --navy: #002b5b;
+        --cream: #faf9f6;
+        --white: #ffffff;
+        --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        --font-primary: "Montserrat", sans-serif;
+        --font-serif: "Playfair Display", serif;
+        --whatsapp-green: #25d366;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
       body {
-        font-family: "Lato", sans-serif;
-        background-color: #f8f6f2;
-        color: #5d4037;
+        background-color: var(--cream);
+        color: var(--navy);
+        overflow-x: hidden;
+        font-family: var(--font-primary);
+        -webkit-font-smoothing: antialiased;
+        scroll-behavior: smooth;
+        font-size: 16px;
+        line-height: 1.65;
       }
       h1,
       h2,
-      h3 {
-        font-family: "Dancing Script", cursive;
+      h3,
+      h4,
+      .logo,
+      .feature-card h4 {
+        font-family: var(--font-serif);
+        font-weight: 600;
       }
-      .header-bg {
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.3)
-          ),
-          url("bg.png");
-        background-size: cover;
-        background-position: center;
+
+      nav {
+        background-color: rgba(0, 43, 91, 0.98);
+        padding: 1.2rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid var(--gold);
       }
-      .countdown-box {
-        background-color: rgba(248, 246, 242, 0.8);
-        backdrop-filter: blur(5px);
+      .logo {
+        font-weight: 800;
+        color: var(--white);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 2rem;
       }
-      .icon-gold {
-        color: #bfa86b;
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
       }
-      .bg-details-image {
-        background-image: linear-gradient(
-            rgba(248, 246, 242, 0.85),
-            rgba(248, 246, 242, 0.85)
-          ),
-          url("bg-details-image.png");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+      .nav-links a {
+        text-decoration: none;
+        color: var(--white);
+        font-weight: 500;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: var(--transition);
       }
-      /* GLightbox Custom Theme */
-      .gslide-description {
-        background: rgba(0, 0, 0, 0.75) !important;
+      .nav-links a:hover {
+        color: var(--gold);
       }
-      .gslide-title {
+
+      .hero {
+        position: relative;
+        height: 85vh;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+        color: var(--white);
+        text-align: center;
+        justify-content: center;
+      }
+      .hero-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        object-fit: cover;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 43, 91, 0.7) 0%,
+          rgba(0, 43, 91, 0.2) 100%
+        );
+        z-index: -1;
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .intro-box {
+        background: var(--navy);
+        color: var(--white);
+        padding: 20px 10%;
+        text-align: center;
+      }
+      .suite-section {
+        padding: 100px 5%;
+        background: var(--white);
+      }
+      .suite-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 120px;
+      }
+      .suite-item:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .suite-img {
+        flex: 0 0 60%;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+      }
+      .suite-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .suite-content {
+        flex: 0 0 45%;
+        background: var(--navy);
+        color: var(--white);
+        padding: 60px;
+        margin-left: -10%;
+        z-index: 2;
+        box-shadow: 20px 20px 0 var(--gold);
+      }
+      .suite-item:nth-child(even) .suite-content {
+        margin-left: 0;
+        margin-right: -10%;
+        box-shadow: -20px 20px 0 var(--gold);
+      }
+      .suite-content h2 {
+        font-size: 2.8rem;
+        color: var(--gold);
+        margin-bottom: 20px;
+      }
+      .suite-content p {
+        padding-bottom: 2rem;
+      }
+
+      .suite-section.moonland {
+        background-color: var(--navy);
+        color: var(--white);
+        padding: 100px 5%;
+      }
+      .moonland .suite-item {
+        flex-direction: row-reverse;
+        margin-bottom: 0;
+      }
+      .moonland .suite-content {
+        background: var(--white);
+        color: var(--navy);
+        margin-left: 0;
+        margin-right: -10%;
+        box-shadow: -20px 20px 0 var(--gold);
+      }
+
+      .grid-section {
+        padding: 100px 5%;
+        text-align: center;
+      }
+      .grid-section h2 {
+        font-size: 3rem;
+        margin-bottom: 60px;
+        color: var(--navy);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      .grid-section h2::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 3px;
+        background: var(--gold);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .custom-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      .feature-card {
+        background: var(--white);
+        position: relative;
+        overflow: hidden;
+        transition: var(--transition);
+        border: 1px solid #eee;
+        border-radius: 4px;
+      }
+      .feature-card:hover {
+        transform: translateY(-15px);
+        border-color: var(--gold);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      .feature-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+      .feature-card h4 {
+        padding: 25px;
+        color: var(--navy);
+        font-size: 1.2rem;
+        text-transform: capitalize;
+      }
+
+      .life-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(197, 160, 89, 0.2);
+      }
+      .life-card h4 {
+        color: var(--gold);
+      }
+      .testimonial-card {
+        padding: 40px;
+        text-align: left;
+      }
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+      .testimonial-author {
+        color: var(--gold);
+        font-size: 0.8rem;
+      }
+
+      .btn-gold {
+        padding: 14px 35px;
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: var(--font-primary);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: var(--transition);
+        display: inline-block;
+        background: transparent;
+      }
+      .btn-gold:hover {
+        background: var(--gold);
+        color: var(--navy);
+        transform: translateY(-3px);
+      }
+
+      .peace-section {
+        padding: 100px 5%;
+        background: var(--navy);
+        color: var(--white);
+      }
+      .peace-wrapper {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: center;
+        gap: 60px;
+      }
+      .peace-text {
+        flex: 1;
+      }
+      .peace-text h2 {
+        color: var(--gold);
+        font-size: 3.2rem;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+      }
+      .peace-text p {
+        opacity: 0.9;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .peace-quote {
+        color: var(--gold);
+      }
+      .peace-btn-group {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+      }
+      .peace-img {
+        flex: 1;
+      }
+      .peace-img img {
+        width: 100%;
+        border-radius: 2px;
+        box-shadow: 20px 20px 0 var(--gold);
+      }
+
+      .awards-strip {
+        background: var(--white);
+        padding: 60px 5%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        border-top: 1px solid #eee;
+      }
+      .awards-strip img {
+        height: 100px;
+        opacity: 0.8;
+      }
+
+      .full-map-section {
+        width: 100%;
+        height: 500px;
+        background: var(--gold);
+        border-top: 2px solid var(--gold);
+      }
+      .full-map-section iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      footer {
+        background: var(--navy);
         color: #fff;
+        padding: 80px 10% 40px;
+        border-top: 4px solid var(--gold);
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 50px;
+      }
+      .footer-col h4 {
+        color: var(--gold);
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+      }
+      .footer-title {
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 10px;
+        font-family: var(--font-serif);
+        font-size: 1.1rem;
+      }
+      .footer-link {
+        color: inherit;
+        text-decoration: none;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 60px;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .footer-copy {
+        font-size: 0.75rem;
+        opacity: 0.5;
+      }
+      .back-to-top {
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .socials a {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .socials a:hover {
+        background: var(--white);
+        color: var(--navy);
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: var(--whatsapp-green);
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        color: white;
+      }
+
+      @media (max-width: 968px) {
+        .suite-item,
+        .suite-item:nth-child(even),
+        .peace-wrapper {
+          flex-direction: column;
+        }
+        .suite-img,
+        .suite-content,
+        .peace-text,
+        .peace-img {
+          width: 100%;
+          margin: 0 !important;
+        }
+        .moonland .suite-item {
+          flex-direction: column;
+        }
+        nav {
+          padding: 1rem 5%;
+        }
+        .nav-links {
+          display: none;
+        }
+        .whatsapp-float {
+          bottom: 20px;
+          right: 20px;
+          width: 50px;
+          height: 50px;
+          font-size: 25px;
+        }
       }
     </style>
   </head>
-  <body class="antialiased">
-    <header class="header-bg text-white text-center py-24 sm:py-32 md:py-40">
-      <div class="container mx-auto px-4">
-        <h1
-          class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-2 animate-fade-in-down"
-        >
-          Athul & Riya
-        </h1>
-        <p class="text-lg sm:text-xl tracking-wider">ARE GETTING MARRIED</p>
+  <body>
+    <nav>
+      <div class="logo">Pennine Care</div>
+      <ul class="nav-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Penine Suite</a></li>
+        <li><a href="#">Moorland Suite</a></li>
+        <li><a href="#life">Life at Pennine</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <video
+        src="pine-care.MOV"
+        class="hero-img"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="http://penninecarecentre.uk/wp-content/uploads/2023/12/10-scaled.jpg"
+        style="object-fit: cover"
+      ></video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p>Experience Excellence</p>
+        <h1>Caring is What we do best</h1>
+        <a href="#contact" class="btn-gold">Book a Visit</a>
       </div>
     </header>
 
-    <main>
-      <section id="countdown" class="py-12 sm:py-16 md:py-20">
-        <div class="container mx-auto text-center px-4">
-          <h2 class="text-4xl sm:text-5xl mb-2">Join Us for Our Special Day</h2>
-          <p class="max-w-2xl mx-auto mb-8 text-gray-600">
-            We can't wait to celebrate our love with you. The big day is just
-            around the corner!
+    <section class="intro-box">
+      <p>
+        Situated in the picturesque Peak district countryside on the outskirts
+        of Glossop, Pennine Care Centre provides person-centred care in a warm
+        and welcoming environment.
+      </p>
+    </section>
+
+    <section id="suites" class="suite-section">
+      <div class="suite-wrapper">
+        <div class="suite-item">
+          <div class="suite-img">
+            <img src="PennineSuite.png" alt="Pennine Suite" />
+          </div>
+          <div class="suite-content">
+            <h2>Pennine Suite</h2>
+            <p>
+              With fully secured accommodation and 24 hour support, Pennine
+              suite caters to a variety of needs. Our person-centred approach
+              ensures that residents are encouraged to live a lifestyle of their
+              choosing.
+            </p>
+            <a href="#" class="btn-gold">Our Homes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="suite-section moonland">
+      <div class="suite-wrapper">
+        <div class="suite-item">
+          <div class="suite-img">
+            <img src="MoorlandSuite.PNG" alt="Moorland Suite" />
+          </div>
+          <div class="suite-content">
+            <h2>Moorland Suite</h2>
+            <p>
+              Our Moorland Suite is a male only unit catering to residents with
+              special requirements. Supported by our caring staff this unique
+              unit provides dignified and quality care.
+            </p>
+            <a href="#" class="btn-gold">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="care" class="grid-section">
+      <h2>Our Care</h2>
+      <div class="custom-grid">
+        <div class="feature-card">
+          <img src="1.PNG" alt="Dementia Care" />
+          <h4>Dementia Care</h4>
+        </div>
+        <div class="feature-card">
+          <img src="2.PNG" alt="Male Unit" />
+          <h4>Male only Unit</h4>
+        </div>
+        <div class="feature-card">
+          <img src="3.PNG" alt="Community" />
+          <h4>Younger people - community</h4>
+        </div>
+        <div class="feature-card">
+          <img src="4.PNG" alt="Needs" />
+          <h4>Emotional and physical needs</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="life" class="grid-section" style="background: var(--navy)">
+      <h2 style="color: var(--gold)">Life at Pennine Care Centre</h2>
+      <div class="custom-grid">
+        <div class="feature-card life-card">
+          <img src="6.PNG" />
+          <h4>Life at Pennine</h4>
+        </div>
+        <div class="feature-card life-card">
+          <img src="5.PNG" />
+          <h4>Person Centered Care</h4>
+        </div>
+        <div class="feature-card life-card">
+          <img src="7.JPEG" />
+          <h4>Activities</h4>
+        </div>
+        <div class="feature-card life-card">
+          <img src="8.PNG" />
+          <h4>Nutrition and dining</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="grid-section">
+      <h2>Testimonials</h2>
+      <div class="custom-grid">
+        <div class="feature-card testimonial-card">
+          <p class="testimonial-text">
+            "Mum was very resistant to giving up her independence, and the staff
+            have bent over backwards to make this as smooth a transition as
+            possible."
+          </p>
+          <strong class="testimonial-author">KATE T (DAUGHTER)</strong>
+        </div>
+        <div class="feature-card testimonial-card">
+          <p class="testimonial-text">
+            "My mum has been a resident for 6 weeks and I am very happy with the
+            care she is receiving. Congratulations on your CQC rating of good."
+          </p>
+          <strong class="testimonial-author">NIGEL B (SON)</strong>
+        </div>
+        <div class="feature-card testimonial-card">
+          <p class="testimonial-text">
+            "I find everyone from the domestics to the carers very helpful. I
+            know he is being cared for and that makes me feel happier."
+          </p>
+          <strong class="testimonial-author">SUSAN S (WIFE)</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="peace-section">
+      <div class="peace-wrapper">
+        <div class="peace-text">
+          <h2>DELIVERING PEACE OF MIND</h2>
+          <p>
+            Through our person-centred care, we aim to provide each of our
+            residents with the highest possible quality of life, luxurious
+            accommodation, and discreet support.
+          </p>
+          <p>
+            <em class="peace-quote"
+              >“To provide exceptional care, delivered by compassionate people,
+              in the highest quality homes.”</em
+            >
+          </p>
+          <div class="peace-btn-group">
+            <a href="#" class="btn-gold">Request Brochure</a>
+            <a href="#" class="btn-gold">Book Visit</a>
+          </div>
+        </div>
+        <div class="peace-img">
+          <img src="quality-care.PNG" alt="Quality Care" />
+        </div>
+      </div>
+    </section>
+
+    <div class="awards-strip">
+      <img
+        src="http://penninecarecentre.uk/wp-content/uploads/2023/10/last-1-150x120.jpg"
+        alt="Award 1"
+      />
+      <img
+        src="http://penninecarecentre.uk/wp-content/uploads/2023/10/last-2-150x120.jpg"
+        alt="Award 2"
+      />
+      <img
+        src="http://penninecarecentre.uk/wp-content/uploads/2023/10/last-3.jpg"
+        alt="Award 3"
+      />
+      <img
+        src="http://penninecarecentre.uk/wp-content/uploads/2023/10/last-4.jpg"
+        alt="Award 4"
+      />
+    </div>
+
+    <div id="contact" class="full-map-section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.346892556277!2d-1.954625223364239!3d53.46228396655512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bc78602b6677b%3A0xc33e0856019a7974!2sPennine%20Care%20Centre!5e0!3m2!1sen!2suk!4v1710000000000!5m2!1sen!2suk"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-title">PENNINE CARE CENTRE</p>
+          <p>Turnlee Road, Glossop,<br />Derbyshire, SK13 6JW</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <p><a href="#" class="footer-link">About Us</a></p>
+          <p><a href="#suites" class="footer-link">Our Suites</a></p>
+          <p><a href="#care" class="footer-link">Care Services</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <p><a href="#" class="footer-link">Careers</a></p>
+          <p><a href="#" class="footer-link">Privacy Policy</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p>
+            <i
+              class="fas fa-phone-alt"
+              style="color: var(--gold); margin-right: 10px"
+            ></i>
+            01457 862466
+          </p>
+          <p>
+            <i
+              class="fas fa-envelope"
+              style="color: var(--gold); margin-right: 10px"
+            ></i>
+            Admin@nyms-services.com
           </p>
           <div
-            id="countdown-timer"
-            class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-8 max-w-2xl mx-auto"
-          ></div>
-        </div>
-      </section>
-
-      <section id="invitation" class="py-16 sm:py-20 md:py-24 bg-details-image">
-        <div class="container mx-auto text-center px-4">
-          <h2 class="text-4xl sm:text-5xl mb-6">You're Invited</h2>
-          <p
-            class="max-w-3xl mx-auto mb-8 text-lg text-gray-700 leading-relaxed"
+            class="socials"
+            style="margin-top: 25px; display: flex; gap: 15px"
           >
-            By the grace of God Almighty, and with the loving support of our
-            families, we, Athul and Riya, humbly invite you to be a part of our
-            sacred union. <br />We would be deeply honoured by your presence to
-            witness and bless our commitment as we are joined together in the
-            holy sacrament of matrimony. Your prayers are the foundation upon
-            which we hope to build our new life.
-          </p>
-          <p class="text-3xl" style="font-family: 'Dancing Script', cursive">
-            With love,<br />Athul & Riya
-          </p>
-        </div>
-      </section>
-
-      <section id="details" class="py-12 sm:py-16 md:py-20 bg-details-image">
-        <div class="container mx-auto px-4">
-          <h2 class="text-center text-4xl sm:text-5xl mb-12">Wedding Events</h2>
-          <div class="flex flex-wrap justify-center gap-8 md:gap-12">
-            <div
-              class="bg-white/50 p-8 rounded-lg shadow-lg text-center max-w-sm w-full transform hover:scale-105 transition-transform duration-300"
-            >
-              <div class="mb-4">
-                <svg
-                  class="w-16 h-16 mx-auto icon-gold"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 5V2M10.5 3.5h3"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 10l-2-2h4l-2 2zM11 5h2v3h-2z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4 12l8-4 8 4"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M5 12v9h14v-9"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M10.5 21v-5a1.5 1.5 0 013 0v5"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-3xl mb-2">The Ceremony</h3>
-              <p class="text-gray-600 font-semibold">
-                Saturday, November 22, 2025
-              </p>
-              <p class="text-gray-500">11:00 AM</p>
-              <hr class="my-4 border-gray-200" />
-              <p class="font-bold">St. Joseph's Church</p>
-              <p class="text-gray-500">Kariyathumpara, Kerala</p>
-            </div>
-
-            <div
-              class="bg-white/50 p-8 rounded-lg shadow-lg text-center max-w-sm w-full transform hover:scale-105 transition-transform duration-300"
-            >
-              <div class="mb-4">
-                <svg
-                  class="w-16 h-16 mx-auto icon-gold"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 11.25a8.25 8.25 0 11-16.5 0 8.25 8.25 0 0116.5 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15.75 11.25a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 21.75a9.75 9.75 0 007.67-3.472.996.996 0 00-.33-1.488L12 12.75l-7.34 3.034a.996.996 0 00-.33 1.488A9.75 9.75 0 0012 21.75z"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-3xl mb-2">The Reception</h3>
-              <p class="text-gray-600 font-semibold">
-                Saturday, November 22, 2025
-              </p>
-              <p class="text-gray-500">12:30 PM onwards</p>
-              <hr class="my-4 border-gray-200" />
-              <p class="font-bold">St. Joseph's Church Parish Hall</p>
-              <p class="text-gray-500">Kariyathumpara, Kerala</p>
-            </div>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
-      </section>
-
-      <section id="location" class="py-12 sm:py-16 md:py-20">
-        <div class="container mx-auto text-center px-4">
-          <h2 class="text-4xl sm:text-5xl mb-8">Our Wedding Location</h2>
-
-          <div
-            class="flex flex-col justify-center items-center gap-4 mb-8 max-w-lg mx-auto sm:hidden"
-          >
-            <a
-              href="https://www.google.com/maps/dir/?api=1&destination=St.+Joseph's+Church,+Kariyathumpara,+Kerala"
-              target="_blank"
-              class="w-full sm:w-auto flex items-center justify-center gap-x-2 px-6 py-3 border-2 border-[#5d4037] text-[#5d4037] font-bold rounded-lg hover:bg-[#5d4037] hover:text-white transition-colors duration-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 32 32"
-                fill="currentColor"
-                class="w-5 h-5"
-              >
-                <path
-                  d="m28.91 4.417-11 24a1 1 0 0 1-1.907-.334l-.93-11.157-11.156-.93a1 1 0 0 1-.334-1.906l24-11a1 1 0 0 1 1.326 1.326z"
-                />
-              </svg>
-              <span>Get Directions</span>
-            </a>
-
-            <a
-              id="addToCalendarBtn"
-              href="#"
-              class="w-full sm:w-auto flex items-center justify-center gap-x-2 px-6 py-3 border-2 border-[#bfa86b] text-[#bfa86b] font-bold rounded-lg hover:bg-[#bfa86b] hover:text-white transition-colors duration-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 25 25"
-                fill="currentColor"
-                class="w-5 h-5"
-              >
-                <path
-                  class="cls-1"
-                  d="M22.5 3H21V2a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1h-4V2a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1H7V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v1H2.5A1.5 1.5 0 0 0 1 4.5v18A1.5 1.5 0 0 0 2.5 24h20a1.5 1.5 0 0 0 1.5-1.5v-18A1.5 1.5 0 0 0 22.5 3zM19 2h1v3h-1zm-7 0h1v3h-1zM5 2h1v3H5zM2.5 4H4v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V4h4v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V4h4v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V4h1.5a.5.5 0 0 1 .5.5V8H2V4.5a.5.5 0 0 1 .5-.5zm20 19h-20a.5.5 0 0 1-.5-.5V9h21v13.5a.5.5 0 0 1-.5.5z"
-                />
-                <path
-                  class="cls-1"
-                  d="M16 15.5h-3v-3a.5.5 0 0 0-1 0v3H9a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1z"
-                />
-              </svg>
-              <span>Add to Calendar</span>
-            </a>
-          </div>
-          <div
-            class="w-full h-96 rounded-lg shadow-lg overflow-hidden border-4 border-white"
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.183341438436!2d75.896597!3d11.5387022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba66554e3caa31b%3A0xafc820ef0a632196!2sSt.Joseph's%20Church!5e0!3m2!1sen!2sin!4v1758101411715!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
-          </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © Copyright 2026 Signature Care Homes | All Rights Reserved.
         </div>
-      </section>
-
-      <section
-        id="bride-groom"
-        class="py-12 sm:py-16 md:py-20 bg-details-image"
-      >
-        <div class="container mx-auto px-4">
-          <h2 class="text-center text-4xl sm:text-5xl mb-12">
-            Meet the Bride & Groom
-          </h2>
-          <div
-            class="flex flex-wrap items-stretch justify-center gap-8 md:gap-4"
-          >
-            <div
-              class="bg-white/60 p-8 rounded-lg shadow-lg text-center max-w-md w-full flex flex-col"
-            >
-              <img
-                src="groom.jpg"
-                alt="Athul"
-                class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-white shadow-md mb-4"
-              />
-              <h3 class="text-4xl">Athul Seban</h3>
-              <p class="text-gray-600 mb-4 italic">
-                "I can't wait to start our forever."
-              </p>
-              <hr class="my-4 border-gray-200" />
-              <div class="space-y-4 text-gray-700 flex-grow text-left">
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-4.663M12 12A3 3 0 1012 6a3 3 0 000 6z"
-                    />
-                  </svg>
-                  <span>Mr. Sebastian Jacob & Mrs. Johnsy Sebastian</span>
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                    />
-                  </svg>
-                  <span>Leona Seban</span>
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                    <path
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20"
-                    />
-                  </svg>
-                  <span>B-Tech Computer Science</span>
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path
-                      d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"
-                    ></path>
-                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
-                    <path
-                      d="M8 13a2 2 0 0 0-2 2v0a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v0a2 2 0 0 0-2-2h-2.5a2 2 0 0 1-3 0H8z"
-                    ></path>
-                  </svg>
-
-                  <span>Senior Software Developer at Seeroo IT solution</span>
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5"
-                    />
-                  </svg>
-                  <span
-                    >Thannickal H, Kallanode P.O, Kariyathumpara, Kozhikode
-                    Dist., Kerala</span
-                  >
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect
-                      x="2"
-                      y="2"
-                      width="20"
-                      height="20"
-                      rx="5"
-                      ry="5"
-                    ></rect>
-                    <path
-                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                    ></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                  <a
-                    href="https://www.instagram.com/a7hul_seban"
-                    target="_blank"
-                    class="hover:underline"
-                    >@a7hul_seban</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="text-center hidden lg:flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-16 h-16 icon-gold"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-
-            <div
-              class="bg-white/60 p-8 rounded-lg shadow-lg text-center max-w-md w-full flex flex-col"
-            >
-              <img
-                src="bride.jpg"
-                alt="Riya"
-                class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-white shadow-md mb-4"
-              />
-              <h3 class="text-4xl">Riya Thankachan</h3>
-              <p class="text-gray-600 mb-4 italic">
-                "I found my soulmate in you."
-              </p>
-              <hr class="my-4 border-gray-200" />
-              <div class="space-y-4 text-gray-700 flex-grow text-left">
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-4.663M12 12A3 3 0 1012 6a3 3 0 000 6z"
-                    />
-                  </svg>
-                  <span>Mr. Thankachan P.D & Mrs. Mary Thankachan</span>
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                    />
-                  </svg>
-                  <span>Liya Thankachan (married to Sanju)</span>
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                    <path
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20"
-                    />
-                  </svg>
-                  <span>BSc Nurse</span>
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path
-                      d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"
-                    ></path>
-                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
-                    <path
-                      d="M8 13a2 2 0 0 0-2 2v0a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v0a2 2 0 0 0-2-2h-2.5a2 2 0 0 1-3 0H8z"
-                    ></path>
-                  </svg>
-                  <span
-                    >Nursing officer at Baby Memorial Hospital, Kozhikode</span
-                  >
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5"
-                    />
-                  </svg>
-                  <span>Puthusseriyil H, Nadavayal, Wayanad Dist., Kerala</span>
-                </div>
-                <div class="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 mr-3 flex-shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect
-                      x="2"
-                      y="2"
-                      width="20"
-                      height="20"
-                      rx="5"
-                      ry="5"
-                    ></rect>
-                    <path
-                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                    ></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                  <a
-                    href="https://www.instagram.com/riyathanku"
-                    target="_blank"
-                    class="hover:underline"
-                    >@riyathanku</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="moments" class="py-12 sm:py-16 md:py-20 bg-details-image">
-        <div class="container mx-auto px-4">
-          <h2 class="text-center text-4xl sm:text-5xl mb-12">Our Moments</h2>
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            <a
-              href="1.jpg"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="1.jpg"
-                alt="Our Moment 1"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="2.jpg"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="2.jpg"
-                alt="Our Moment 2"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="3.jpg"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="3.jpg"
-                alt="Our Moment 3"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="4.jpg"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="4.jpg"
-                alt="Our Moment 4"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="5.jpg"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="5.jpg"
-                alt="Our Moment 5"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="6.jpg"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="6.jpg"
-                alt="Our Moment 6"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="7.JPG"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="7.JPG"
-                alt="Our Moment 7"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="8.jpg"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="8.jpg"
-                alt="Our Moment 8"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="9.jpg"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="9.jpg"
-                alt="Our Moment 9"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="10.jpg"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="10.jpg"
-                alt="Our Moment 10"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="11.JPG"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="11.JPG"
-                alt="Our Moment 11"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a
-              href="12.JPG"
-              class="gallery-item block group aspect-square rounded-lg shadow-lg overflow-hidden"
-            >
-              <img
-                src="12.JPG"
-                alt="Our Moment 12"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white text-center py-8">
-      <div class="container mx-auto px-4">
-        <h3 class="text-3xl mb-2">Riya & Athul</h3>
-        <p>© 2025. Made with love.</p>
+        <a href="#" class="back-to-top"
+          >Back to top <i class="fas fa-arrow-up" style="margin-left: 5px"></i
+        ></a>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script type="text/javascript">
-      // Initialize GLightbox
-      const lightbox = GLightbox({
-        selector: ".gallery-item",
-        loop: true,
-      });
-    </script>
-
-    <script>
-      const countDownDate = new Date("Nov 22, 2025 11:00:00").getTime();
-      const countdownContainer = document.getElementById("countdown-timer");
-
-      const countdownInterval = setInterval(function () {
-        const now = new Date().getTime();
-        const distance = countDownDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        countdownContainer.innerHTML = `
-                <div class="countdown-box p-4 rounded-lg shadow-md">
-                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold">${String(
-                      days
-                    ).padStart(2, "0")}</div>
-                    <div class="text-xs sm:text-sm uppercase tracking-wider text-gray-600">Days</div>
-                </div>
-                <div class="countdown-box p-4 rounded-lg shadow-md">
-                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold">${String(
-                      hours
-                    ).padStart(2, "0")}</div>
-                    <div class="text-xs sm:text-sm uppercase tracking-wider text-gray-600">Hours</div>
-                </div>
-                <div class="countdown-box p-4 rounded-lg shadow-md">
-                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold">${String(
-                      minutes
-                    ).padStart(2, "0")}</div>
-                    <div class="text-xs sm:text-sm uppercase tracking-wider text-gray-600">Minutes</div>
-                </div>
-                <div class="countdown-box p-4 rounded-lg shadow-md">
-                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold">${String(
-                      seconds
-                    ).padStart(2, "0")}</div>
-                    <div class="text-xs sm:text-sm uppercase tracking-wider text-gray-600">Seconds</div>
-                </div>
-              `;
-
-        if (distance < 0) {
-          clearInterval(countdownInterval);
-          countdownContainer.innerHTML = `<div class="col-span-4 text-3xl font-bold">The Big Day is Here!</div>`;
-        }
-      }, 1000);
-
-      document
-        .getElementById("addToCalendarBtn")
-        .addEventListener("click", function (event) {
-          // Event details
-          const eventName = "Wedding: Athul & Riya";
-          const startDate = "20251122T103000"; // Format: YYYYMMDDTHHMMSS
-          const endDate = "20251122T130000"; // Assuming the event ends at 1 PM
-          const location = "St. Joseph's Church, Kariyathumpara, Kerala";
-          const description =
-            "Join us to celebrate the wedding of Athul Seban and Riya Thankachan.";
-          const url = "https://journeyofathulriya.life";
-
-          // Create the .ics file content
-          const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-SUMMARY:${eventName}
-DTSTART:${startDate}
-DTEND:${endDate}
-LOCATION:${location}
-DESCRIPTION:${description}
-URL:${url}
-END:VEVENT
-END:VCALENDAR`;
-
-          // Create a blob and trigger download
-          const blob = new Blob([icsContent], {
-            type: "text/calendar;charset=utf-8",
-          });
-          const link = document.createElement("a");
-          link.href = URL.createObjectURL(blob);
-          link.download = "athul-riya-wedding.ics";
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        });
-    </script>
+    <a href="https://wa.me/441457862466" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
   </body>
 </html>
-
-
